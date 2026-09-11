@@ -1,0 +1,3 @@
+Address: 1GZdNtQYa2DN4b3hLekrYErv9c8WLqbBTm
+Base58Check valid: true
+Version byte: 0

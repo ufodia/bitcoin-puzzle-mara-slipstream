@@ -1,0 +1,20 @@
+{
+  "repository_name": "bitcoin-puzzle-mara-slipstream",
+  "display_name": "PuzzleSlipstream",
+  "description": "Offline-first Rust GUI for safely sweeping authorized Bitcoin Puzzle P2PKH keys through MARA Slipstream without public mempool broadcast.",
+  "topics": [
+    "bitcoin",
+    "bitcoin-puzzle",
+    "mara-slipstream",
+    "rust",
+    "p2pkh",
+    "offline-signer",
+    "private-relay",
+    "transaction-sweeper",
+    "security",
+    "bitcoin-core"
+  ],
+  "license": "MIT OR Apache-2.0",
+  "donation_address": "1GZdNtQYa2DN4b3hLekrYErv9c8WLqbBTm",
+  "release": "v0.1.0-alpha.1"
+}

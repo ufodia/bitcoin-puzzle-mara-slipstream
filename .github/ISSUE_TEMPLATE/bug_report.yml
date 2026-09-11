@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible non-sensitive defect using Regtest/Testnet4 data
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never paste a private key, WIF, seed, valuable raw transaction, `.swe` file, API credential, or Bitcoin Core cookie. Use a private Security Advisory for sensitive vulnerabilities.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options: [Signer, Relay, Core library, Documentation, Build]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Regtest/Testnet4 reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

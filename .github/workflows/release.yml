@@ -1,0 +1,27 @@
+name: Source release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create source archive
+        run: |
+          mkdir stage
+          git archive --format=zip --prefix=bitcoin-puzzle-mara-slipstream/ -o stage/bitcoin-puzzle-mara-slipstream-${GITHUB_REF_NAME}-source.zip HEAD
+          cd stage
+          sha256sum *.zip > SHA256SUMS.txt
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            stage/*.zip
+            stage/SHA256SUMS.txt
+          generate_release_notes: true
+          draft: true

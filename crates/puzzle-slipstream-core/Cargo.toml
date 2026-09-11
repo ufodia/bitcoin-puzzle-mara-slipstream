@@ -1,0 +1,32 @@
+[package]
+name = "puzzle-slipstream-core"
+description = "Offline P2PKH sweep construction, encrypted transfer, validation and private relay adapters"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+signer = []
+network = ["dep:reqwest", "dep:tokio", "dep:url"]
+mainnet = []
+
+[dependencies]
+argon2.workspace = true
+base64.workspace = true
+bitcoin.workspace = true
+chacha20poly1305.workspace = true
+hex.workspace = true
+rand.workspace = true
+reqwest = { workspace = true, optional = true }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio = { workspace = true, optional = true }
+url = { workspace = true, optional = true }
+zeroize.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true

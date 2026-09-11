@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/puzzle-slipstream/utxo-bundle.schema.json",
+  "title": "PuzzleSlipstream UTXO bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "version", "network", "inputs"],
+  "properties": {
+    "format": { "const": "puzzle-slipstream-utxos" },
+    "version": { "const": 1 },
+    "network": { "enum": ["regtest", "testnet4", "signet", "mainnet"] },
+    "inputs": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 512,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["previous_transaction_hex", "vout"],
+        "properties": {
+          "previous_transaction_hex": {
+            "type": "string",
+            "pattern": "^[0-9A-Fa-f]+$",
+            "minLength": 20,
+            "maxLength": 800000
+          },
+          "vout": { "type": "integer", "minimum": 0, "maximum": 4294967295 },
+          "label": { "type": ["string", "null"], "maxLength": 200 }
+        }
+      }
+    }
+  }
+}

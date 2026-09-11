@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/puzzle-slipstream/encrypted-envelope.schema.json",
+  "title": "PuzzleSlipstream encrypted sweep envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "version", "kdf", "cipher", "ciphertext_b64"],
+  "properties": {
+    "format": { "const": "puzzle-slipstream-encrypted-sweep" },
+    "version": { "const": 1 },
+    "kdf": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "memory_kib", "iterations", "parallelism", "salt_b64"],
+      "properties": {
+        "name": { "const": "argon2id" },
+        "memory_kib": { "type": "integer", "minimum": 19456 },
+        "iterations": { "type": "integer", "minimum": 2 },
+        "parallelism": { "type": "integer", "minimum": 1 },
+        "salt_b64": { "type": "string", "minLength": 20, "maxLength": 32 }
+      }
+    },
+    "cipher": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "nonce_b64"],
+      "properties": {
+        "name": { "const": "xchacha20poly1305" },
+        "nonce_b64": { "type": "string", "minLength": 30, "maxLength": 40 }
+      }
+    },
+    "ciphertext_b64": { "type": "string", "minLength": 32, "maxLength": 8000000 }
+  }
+}

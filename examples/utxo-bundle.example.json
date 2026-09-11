@@ -1,0 +1,12 @@
+{
+  "format": "puzzle-slipstream-utxos",
+  "version": 1,
+  "network": "regtest",
+  "inputs": [
+    {
+      "previous_transaction_hex": "REPLACE_WITH_A_COMPLETE_REGTEST_PREVIOUS_TRANSACTION",
+      "vout": 0,
+      "label": "authorized Regtest output"
+    }
+  ]
+}

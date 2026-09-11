@@ -1,0 +1,16 @@
+/target/
+/dist/
+*.swe
+*.wif
+*.key
+*.seed
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+coverage/
+*.profraw

@@ -1,0 +1,18 @@
+[package]
+name = "puzzle-slipstream-relay"
+description = "Online native GUI for independent sweep validation and MARA Slipstream submission"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+mainnet = ["puzzle-slipstream-core/mainnet"]
+
+[dependencies]
+iced.workspace = true
+puzzle-slipstream-core = { path = "../../crates/puzzle-slipstream-core", features = ["network"] }
+rfd.workspace = true
+zeroize.workspace = true
