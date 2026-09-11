@@ -18,7 +18,7 @@ jobs:
           git archive --format=zip --prefix=bitcoin-puzzle-mara-slipstream/ -o stage/bitcoin-puzzle-mara-slipstream-${GITHUB_REF_NAME}-source.zip HEAD
           cd stage
           sha256sum *.zip > SHA256SUMS.txt
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: |
             stage/*.zip
