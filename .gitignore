@@ -14,3 +14,6 @@ Thumbs.db
 .vscode/
 coverage/
 *.profraw
+
+# graphify local code graph (rebuilt per machine)
+graphify-out/
