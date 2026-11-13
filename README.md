@@ -163,3 +163,11 @@ Use this software only for Bitcoin keys and UTXOs you own or are explicitly auth
 ## No affiliation
 
 This independent project is not affiliated with, sponsored by, endorsed by, or audited by MARA Holdings, Inc., Bitcoin Core, or any Bitcoin Puzzle publisher.
+
+## Support this project
+
+<p align="center">
+  <a href="https://buymeacoffee.com/ufodia">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="60">
+  </a>
+</p>
