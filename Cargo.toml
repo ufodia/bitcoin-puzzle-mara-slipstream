@@ -18,7 +18,7 @@ keywords = ["bitcoin", "p2pkh", "offline-signer", "slipstream", "rust"]
 categories = ["cryptography::cryptocurrencies", "gui"]
 
 [workspace.dependencies]
-argon2 = "0.5.3"
+argon2 = "0.6.0"
 base64 = "0.22.1"
 bitcoin = { version = "0.32.7", features = ["serde"] }
 chacha20poly1305 = { version = "0.10.1", features = ["std"] }
